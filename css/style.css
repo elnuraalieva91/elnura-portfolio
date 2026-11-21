@@ -1,0 +1,63 @@
+:root{--ink:#14213d;--muted:#5b6478;--bg:#f4f6f9;--card:#fff;--line:#d9dee8;--red:#c8102e;--sun:#f4b400;--r:6px}
+@media (prefers-color-scheme:dark){:root{--ink:#e9edf6;--muted:#9aa5bd;--bg:#0f1626;--card:#18213a;--line:#2a3555;--red:#ff5a6e}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Newsreader",Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0 .5em;font-weight:600}
+a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header.top{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:5}
+header.top .wrap{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.brand{font:600 1.15rem "Newsreader",Georgia,serif;text-decoration:none;display:flex;align-items:center;gap:9px}
+.brand i{width:14px;height:14px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 3px var(--red) inset}
+nav{display:flex;gap:4px 16px;flex-wrap:wrap;font-size:.92rem}
+nav a{text-decoration:none;color:var(--muted);padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{color:var(--ink);border-color:var(--red)}
+.hero{padding:64px 0 40px}.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.02em}
+.hero p.lead{font-size:1.2rem;max-width:34em;color:var(--muted)}
+.contact{display:flex;gap:8px 22px;flex-wrap:wrap;margin-top:22px;font-size:.95rem}
+.fan{position:relative;height:340px}
+.fan img{position:absolute;width:62%;border:1px solid var(--line);border-radius:var(--r);background:#fff;box-shadow:0 10px 30px rgba(20,33,61,.18)}
+.fan img:nth-child(1){left:0;top:30px;transform:rotate(-6deg)}
+.fan img:nth-child(2){left:22%;top:0;transform:rotate(3deg)}
+.fan img:nth-child(3){left:38%;top:80px;transform:rotate(-2deg)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);margin:24px 0}
+.stats div{padding:20px 16px;border-left:1px solid var(--line)}.stats div:first-child{border-left:0}
+.stats b{display:block;font:600 2.4rem "Newsreader",Georgia,serif}.stats span{color:var(--muted);font-size:.92rem}
+section{padding:36px 0}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0}
+.tl li{border-top:3px solid var(--ink);padding:14px 14px 0 0;font-size:.93rem;position:relative}
+.tl li::before{content:"";position:absolute;top:-8px;left:0;width:13px;height:13px;border-radius:50%;background:var(--red)}
+.tl b{display:block;font:600 1.3rem "Newsreader",Georgia,serif;margin-top:6px}
+.sections{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.sections a{display:block;padding:20px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);text-decoration:none}
+.sections a:hover{border-color:var(--red)}.sections h3{font-size:1.25rem;margin-bottom:.3em}.sections p{margin:0;color:var(--muted);font-size:.93rem}
+.pagehead{padding:44px 0 8px}.pagehead h1{font-size:clamp(2rem,4vw,3rem)}.pagehead p{color:var(--muted);max-width:44em}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.tools input{flex:1;min-width:220px;padding:11px 14px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);color:var(--ink);font:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;padding-bottom:60px}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;text-align:left;padding:0;font:inherit;color:inherit;display:flex;flex-direction:column}
+.doc:hover{border-color:var(--red)}
+.doc img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;background:#e9ecf2;border-bottom:1px solid var(--line)}
+.doc div{padding:14px 16px 16px}.doc small{color:var(--red);font-weight:700}
+.doc h3{font-size:1.1rem;margin:.2em 0 .3em}.doc p{margin:0;color:var(--muted);font-size:.88rem}
+dialog{border:0;border-radius:var(--r);padding:0;width:min(920px,94vw);background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(10,16,30,.7)}
+.dlg{display:grid;grid-template-columns:1.2fr 1fr}.dlg img{width:100%;display:block;background:#e9ecf2}
+.dlg .tx{padding:26px}.dlg .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:10px 18px;border-radius:var(--r);border:1px solid var(--ink);background:var(--ink);color:var(--bg);font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.9rem}
+@media (max-width:800px){.hero .wrap,.dlg{grid-template-columns:1fr}.fan{height:250px}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media print{header.top,.tools,footer{display:none}.doc{break-inside:avoid}}
+.mats{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;padding-bottom:40px}
+.mat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.mat h3{font-size:1.3rem}.mat p{color:var(--muted);font-size:.95rem;margin:.3em 0 .8em}
+details{border-top:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:600}
+details ol{margin:.6em 0 0;padding-left:1.3em;font-size:.92rem;color:var(--muted)}
+.facts{display:flex;gap:8px 28px;flex-wrap:wrap;margin:16px 0 8px;font-size:.95rem}.facts b{font-family:"Newsreader",Georgia,serif}
+.cv section{padding:22px 0;border-top:1px solid var(--line)}.cv h2{font-size:1.5rem}
+.job{display:grid;grid-template-columns:150px 1fr;gap:4px 20px;padding:6px 0}.job b{font-weight:600}
+.job span.when{color:var(--muted)}
+.cv ul{margin:0;padding-left:1.2em}.cv li{margin:.3em 0}
+@media (max-width:600px){.job{grid-template-columns:1fr}}
